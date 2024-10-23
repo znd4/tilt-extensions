@@ -98,6 +98,7 @@ def helm_resource(
     apply_cmd.extend(flags)
 
   apply_cmd.extend(["--kube-context", k8s_context()])
+  delete_cmd.extend(["--kube-context", k8s_context()])
 
   dupe_deps = {}
   for i in range(len(image_deps)):
